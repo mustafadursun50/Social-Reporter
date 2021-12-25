@@ -1,0 +1,4 @@
+python 3.7.1
+facial-emotion-recognition 1.0.2
+cvlib-0.2.6
+tensorflow==2.1.0
