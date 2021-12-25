@@ -29,9 +29,9 @@ def main():
     iteration = 0
     savedContentList = []
 
-    for framename in os.listdir(config.incas_dir):
+    for framename in os.listdir(config.input_dir):
         print("iteration: " + str(iteration))
-        frame = cv2.imread(config.incas_dir + "/" + framename)
+        frame = cv2.imread(config.input_dir + "/" + framename)
         frame, emotions, face_boxes = config.emotion_model.recognise_emotion(frame)
         person_boxes, env_boxes, person_labels, env_labels, confs = cvlib.detect_common_objects(frame, confidence=.75)
         frame = cvlib.object_detection.draw_person_bbox(frame, person_boxes, person_labels, confs, write_conf=False)
@@ -41,7 +41,7 @@ def main():
         content_identifier = isValidContent(photo_object, savedContentList)
 
         if(content_identifier != "no_identifer"):
-            cv2.imwrite(config.output_path + '%s_%s.jpeg' % (iteration, content_identifier), frame)
+            cv2.imwrite(config.output_dir + '%s_%s.jpeg' % (iteration, content_identifier), frame)
             row_content = [framename[4:5],iteration,content_identifier,time.strftime('%H:%M:%S', helper.getLocalTime(photo_object.photo_time))]
             helper.save_to_csv('output/contents.csv', row_content)
             savedContentList.append(po.ContentToSave(content_identifier, photo_object))

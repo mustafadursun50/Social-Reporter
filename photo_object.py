@@ -18,8 +18,7 @@ def get_person_from_center(person_boxes):
         for pbox in person_boxes:
             p_center_Xcoord = pbox[0] + pbox[2] - pbox[0]
             diff_to_center =  abs(p_center_Xcoord - config.frame_width / 2)
-            print("diff_to_center: " + str(diff_to_center))
-            if(diff_to_center < config.frame_width/4): # 529 < 1920/4=480
+            if(diff_to_center < config.frame_width/4):
                 return pbox
     else:
         return []
