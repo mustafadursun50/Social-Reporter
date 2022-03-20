@@ -37,4 +37,14 @@ https://medium.com/@marioruizgonzalez.mx/how-install-tesseract-orc-and-pytessera
 
 
 ## How to use
+- Start main program:
+``
+python social_reporter.py
+``
+
+- Start main collage maker:
+``
+python collage_maker.py
+``
+
 
