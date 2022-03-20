@@ -1,7 +1,6 @@
 __pycache__
 .vscode/*
 /.vs
-input
 output/*
 !.vscode/launch.json
 .git-versioned-pom.xml
