@@ -46,7 +46,7 @@ python social_reporter.py
   - If a social media relevant image is given, the image will be extracted to the folder: ``output``
   - In addition, an entry will be written in the file ``output/contents.csv``
 
-- Start main collage maker:
+- Start collage maker:
 ``
 python collage_maker.py
 ``
