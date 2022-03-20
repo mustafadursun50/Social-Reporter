@@ -285,17 +285,17 @@ def main():
     args = parse.parse_args()
 
 
-    #print('Start Collage Variety..')
+    print('Start Collage Variety..')
     varietyImages = getNamesFromCsvForVarietyCollage()
-    #doCollageWithGivenNames(varietyImages, args, 'collageVariety_'+ time.strftime('%H%M%S', helper.getLocalTime(time.time())))
+    doCollageWithGivenNames(varietyImages, args, 'collageVariety_'+ time.strftime('%H%M%S', helper.getLocalTime(time.time())))
 
-    #print('Start Collage Person..')
+    print('Start Collage Person..')
     personImages = getNamesFormCsvForPersonCollage()
     doCollageWithGivenNames(personImages, args, 'collagePerson_'+ time.strftime('%H%M%S', helper.getLocalTime(time.time())))
 
-   # print('Start Collage Environment..')
+    print('Start Collage Environment..')
     envImages = getNamesFormCsvForEnvCollage()
-    #doCollageWithGivenNames(envImages, args, 'collageEnvironment'+ time.strftime('%H%M%S', helper.getLocalTime(time.time())))
+    doCollageWithGivenNames(envImages, args, 'collageEnvironment'+ time.strftime('%H%M%S', helper.getLocalTime(time.time())))
 
 
 if __name__ == '__main__':

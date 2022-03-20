@@ -21,14 +21,12 @@ def init():
     global time_to_leave_in_sec
     global lectureKeyWords
     global path_tesseract
-    input_dir = "C:/Users/mustdur/Documents/Master/Masterarbeit/Social_Reporter/input"
-    #frame_width = my_video.get(cv2.CAP_PROP_FRAME_WIDTH)
+    input_dir = "./input"
     frame_width = 1920
-    #frame_height = my_video.get(cv2.CAP_PROP_FRAME_HEIGHT)
     frame_height = 1080
-    output_dir = "C:/Users/mustdur/Documents/Master/Masterarbeit/Social_Reporter/output/"
+    output_dir = "./output/"
     emotion_model = EmotionRecognition(device='cpu', gpu_id=0)
     time_to_leave_in_sec = 5
-    lectureKeyWords = open("C:/Users/mustdur/Documents/Master/Masterarbeit/Social_Reporter/keywords.txt", "r").read().split(";")
+    lectureKeyWords = open("./keywords.txt", "r").read().split(";")
     path_tesseract = "C:/Program Files (x86)/Tesseract-OCR/tesseract.exe"
     pytesseract.tesseract_cmd = "C:/Program Files (x86)/Tesseract-OCR/tesseract.exe"

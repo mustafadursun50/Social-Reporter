@@ -3,5 +3,6 @@ __pycache__
 /.vs
 input/*
 output/*
+Tesseract-OCR/*
 !.vscode/launch.json
 .git-versioned-pom.xml
