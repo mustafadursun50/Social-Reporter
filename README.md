@@ -44,7 +44,7 @@ python social_reporter.py
   - The files are loaded one after the other from the folder ``input`` and analyzed
   - The files in the folder must have the following format: ``Cam01_20211015_174122``
   - If a social media relevant image is given, the image will be extracted to the folder: ``output``
-  - In addition, an entry will be written in the file ``contents.csv``
+  - In addition, an entry will be written in the file ``output/contents.csv``
 
 - Start main collage maker:
 ``
