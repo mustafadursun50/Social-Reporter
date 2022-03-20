@@ -21,17 +21,17 @@ def isAPerson(current_photo):
 
 def isEmotionRelevant(current_photo):
     if not current_photo.emotions:
-        #print('0 emotion found. Ignore')
+        print('0 emotion found')
         return False
     if(len(current_photo.emotions) > 2):
-        #print('to much emotions. Ignore')
+        print('to much emotions')
         return False
 
     myList = list(filter(lambda x: getListOfHappyEmotions(x), current_photo.emotions))
     if len(myList) == 1:
         return True
     else:
-        #print('only irrelevand emotion. Ignore')
+        print('only irrelevand emotion')
         return False
 
 def getListOfHappyEmotions(emotion):
@@ -44,19 +44,19 @@ def isRatioOkay(current_photo):
 # x1, y1, x2, y2 = int(round(boxes[i][0])), int(round(boxes[i][1])), int(round(boxes[i][2])), int(round(boxes[i][3]))
     person_box = current_photo.main_person
     if not person_box:
-        #print('person not in main place of center. Ignore')
+        print('person not in main place of center')
         return False
 
     ToBreitPersons = list(filter(lambda x: getToBreitPersonForDozent(x), current_photo.person_boxes))
     if(len(ToBreitPersons) > 0):
-        #print('to big person available. Ignore')
+        print('to big person available')
         return False
 
     face_box = current_photo.face_boxes
 
     ToBigFaces = list(filter(lambda x: getToBigFacesForDozent(x), face_box))
     if(len(ToBigFaces) > 0):
-        #print('to big faces available. Ignore')
+        print('to big faces available')
         return False
 
     face_in_person = 0
@@ -66,7 +66,7 @@ def isRatioOkay(current_photo):
         if(person_box[0] < face_box[i][0] and person_box[1] < face_box[i][1] and person_box[2] > face_box[i][2] and person_box[3] > face_box[i][3]):
             face_in_person = 1       
         if(face_in_person != 1):
-            #print('face not in main person box. Ignore')
+            #print('face not in main person box')
             return False
 
 def isPositionNew(current_photo, savedContentList):
@@ -219,5 +219,5 @@ def nonLectureObjectGiven(current_photo, savedContentList):
 def relevantTextGiven(current_photo, savedContentList):
     if(len(current_photo.words) > 30 and len(current_photo.person_boxes) < 3  and len(current_photo.emotions) < 3):
         if(helper.isNotSavedInGivenTime(savedContentList, "relevant_text")):
-            #print("words > 30 --> valid")
+            print("words > 30 --> valid")
             return True
