@@ -41,10 +41,16 @@ https://medium.com/@marioruizgonzalez.mx/how-install-tesseract-orc-and-pytessera
 ``
 python social_reporter.py
 ``
+  - The files are loaded one after the other from the folder ``input`` and analyzed
+  - The files in the folder must have the following format: ``Cam01_20211015_174122``
+  - If a social media relevant image is given, the image will be extracted to the folder: ``output``
+  - In addition, an entry will be written in the file ``contents.csv``
 
 - Start main collage maker:
 ``
 python collage_maker.py
 ``
+  - Photo collages are created from the folder ``output``
+  - If there are enough single images, the collage will be created again in the same folder
 
 
