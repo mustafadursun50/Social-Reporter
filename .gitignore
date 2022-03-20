@@ -1,0 +1,5 @@
+__pycache__
+.vscode/*
+/.vs
+!.vscode/launch.json
+.git-versioned-pom.xml
