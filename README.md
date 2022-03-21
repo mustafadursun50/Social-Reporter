@@ -11,7 +11,7 @@ pip=21.1.2
 
 
 ## How to setup
-- All required packages are summarized in requirements.txt. Install all these packages: 
+- All required packages are summarized in requirements.txt. Install all these packages via command: 
 ``
 pip -r requirements.txt
 ``
@@ -37,7 +37,7 @@ https://medium.com/@marioruizgonzalez.mx/how-install-tesseract-orc-and-pytessera
 
 
 ## How to use
-- Start main program:
+- Start main program via command:
 ``
 python social_reporter.py
 ``
@@ -46,7 +46,7 @@ python social_reporter.py
   - If a social media relevant image is given, the image will be extracted to the folder: ``output``
   - In addition, an entry will be written in the file ``output/contents.csv``
 
-- Start collage maker:
+- Start collage maker via command:
 ``
 python collage_maker.py
 ``
