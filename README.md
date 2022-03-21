@@ -15,9 +15,9 @@ pip=21.1.2
 ``
 pip -r requirements.txt
 ``
-- Folder adapted_python_libs contains two modified Python classes (object_detection.py and facial_emotion_recognition.py). 
+- Folder adapted_python_libs contains two modified Python classes (`object_detection.py` and `facial_emotion_recognition.py`). 
 The just installed classes must be overwritten with these.
-  1. Navigate to the install location of object_detection.py. This should be in: 
+  1. Navigate to the install location of ``object_detection.py``. This should be in: 
   ``
   C:\Users\{username}\AppData\Local\Programs\Python\Python37\Lib\site-packages\cvlib\object_detection.py
   ``
@@ -26,7 +26,7 @@ The just installed classes must be overwritten with these.
   adapted_python_libs/object_detection.py
   ``
   3. save replaced file.
-  4. Repeat the process for facial_emotion_recognition.py
+  4. Repeat the process for ``facial_emotion_recognition.py``
 
 - Install Tessarct as described here
 ``
@@ -51,6 +51,6 @@ python social_reporter.py
 python collage_maker.py
 ``
   - Photo collages are created from the folder ``output``
-  - If there are enough single images, the collage will be created again in the same folder
+  - If there are enough single images, the collage will be created again in the folder ``output``
 
 
